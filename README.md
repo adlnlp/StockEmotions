@@ -14,7 +14,7 @@ This repository contains a financial-domain-focused dataset for financial sentim
     - bullish (~positive), bearish (~negative)
 - Emotion classes: 12 annotated by Human & AI collaboration
     - ambiguous, amusement, anger, anxiety, belief, confusion, depression, disgust, excitement, optimism, panic, surprise 
-<p align="left"><img src="./img/4_annotation_guide.png" style="max-width: 50%;"></p>
+<p align="left"><img src="./img/4_annotation_guide.png" style="max-width: 40%;"></p>
 
 
 ## Data explained
@@ -37,7 +37,7 @@ We conduct topic representations using BERTopic to understand whether the curate
 
 
 ## Multivariate Time Series
-<p align="left"><img src="./img/5_timeseries_model.png" style="max-width: 50%;"></p>
+<p align="left"><img src="./img/5_timeseries_model.png" style="max-width: 40%;"></p>
 
 We implement a Temporal Attention LSTM with bidirectional encoder representations from transformers (BERT). We will share more models and ablation testing results for further research. 
 
@@ -45,12 +45,12 @@ We implement a Temporal Attention LSTM with bidirectional encoder representation
 ## Citation
 
 ```bibtex
-        @article{lee2023stockemotions,
-        title={StockEmotions: Discover Investor Emotions for Financial Sentiment Analysis and Multivariate Time Series},
-        author={Lee, Jean and Youn, Hoyoul Luis and Poon, Josiah and Han, Soyeon Caren},
-        journal={arXiv preprint arXiv:2301.09279},
-        year={2023}
-        }
+@article{lee2023stockemotions,
+title={StockEmotions: Discover Investor Emotions for Financial Sentiment Analysis and Multivariate Time Series},
+author={Lee, Jean and Youn, Hoyoul Luis and Poon, Josiah and Han, Soyeon Caren},
+journal={arXiv preprint arXiv:2301.09279},
+year={2023}
+}
 ```
 
 
