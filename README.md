@@ -7,22 +7,22 @@
 This repository contains a financial-domain-focused dataset for financial sentiment/emotion classification and stock market time series prediction. It's based on our paper: [StockEmotions: Discover Investor Emotions for Financial Sentiment Analysis and Multivariate Time Series](https://arxiv.org/abs/2301.09279) accepted by AAAI 2023 Bridge (AI for Financial Services).
 
 
-## Key statistics of the data
-- Data period: Jan 2020 - Dec 2020
+## Key statistics of the dataset
+- Data collected period: Jan 2020 - Dec 2020
 - Number of Utterance: 10,000  (train 80%, val 10%, test 10%)
 - Sentiment classes: 2 annotated by users 
     - bullish (~positive), bearish (~negative)
 - Emotion classes: 12 annotated by Human & AI collaboration
     - ambiguous, amusement, anger, anxiety, belief, confusion, depression, disgust, excitement, optimism, panic, surprise 
-<p align="left"><img src="./img/4_annotation_guide.png" style="max-width: 40%;"></p>
+<p align="left"><img src="./img/4_annotation_guide.png" style="max-width: 30%;"></p>
 
 
 ## Data explained
 - tweet folder
     - **processed.csv**: 50,281 samples with text processed data (handling emoji and CTAG). It is used for Topic Modelling before proceeding with the emotion annotation.
-    - **train, val, test.csv** : In total, 10,000 samples. Each file has *id, date, ticker, emo_label, senti_lable, and original* content. 
+    - **train, val, test.csv** : In total, 10,000 samples. Each file has *id, date, ticker, emo_label, senti_lable, and original* content. This is used for Financial Sentiment/Emotion Classification. 
 - price folder
-    - **38 companies histrical price data** in csv format. This is used for Multivariate Time Series task. 
+    - **38 companies histrical price data** in csv format. This is used for Multivariate Time Series. 
     - Tickers: 
         'AAPL', 'ABNB', 'AMT', 'AMZN', 'BA', 'BABA', 'BAC', 'BKNG', 'BRK.A', 'BRK.B', 'CCL', 'CVX',
         'DIS', 'FB', 'GOOG', 'GOOGL', 'HD', 'JNJ', 'JPM', 'KO', 'LOW', 'MA', 'MCD', 'MSFT', 'NFLX',
@@ -37,7 +37,7 @@ We conduct topic representations using BERTopic to understand whether the curate
 
 
 ## Multivariate Time Series
-<p align="left"><img src="./img/5_timeseries_model.png" style="max-width: 40%;"></p>
+<p align="left"><img src="./img/5_timeseries_model.png" style="max-width: 30%;"></p>
 
 We implement a Temporal Attention LSTM with bidirectional encoder representations from transformers (BERT). We will share more models and ablation testing results for further research. 
 
