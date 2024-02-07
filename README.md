@@ -20,7 +20,7 @@ This repository contains a financial-domain-focused dataset for financial sentim
 ## Data explained
 - tweet folder
     - **processed.csv**: 50,281 samples with text processed data (handling emoji and CTAG). It is used for Topic Modelling before proceeding with the emotion annotation.
-    - **train, val, test.csv** : In total, 10,000 samples. Each file has id, date, ticker, emo_label, senti_lable, and original content. The dataset is used for Financial Sentiment/Emotion Classification tasks. 
+    - **train, val, test.csv** : In total, 10,000 samples. Each file has id, date, ticker, emo_label, senti_lable, original, and processed content. For the data curation, processing (e.g. emoji, CTAG, HTAG), and annotation, we refer to our paper. The dataset is used for Financial Sentiment/Emotion Classification tasks. 
 - price folder
     - **38 companies histrical price data** in csv format. The tweet and price dataset together are used for Multivariate Time Series tasks. 
     - Tickers: 
@@ -35,13 +35,13 @@ This repository contains a financial-domain-focused dataset for financial sentim
 ## Topic Modeling and Data Creation
 <p align="left"><img src="./img/2_topic_model.png" style="max-width: 70%;"></p>
 
-We conduct topic representations using BERTopic to understand whether the curated data represents emotions and to establish the sampling strategy for annotation. The annotation process refers to our paper. 
+We conduct topic representations using BERTopic to understand whether the curated data represents emotions and to establish the sampling strategy for annotation.  
 
 
 ## Multivariate Time Series
 <p align="left"><img src="./img/5_timeseries_model.png" style="max-width: 40%;"></p>
 
-We implement a Temporal Attention LSTM with bidirectional encoder representations from transformers (BERT). We will share more models and ablation testing results for further research. 
+We implement a Temporal Attention LSTM with bidirectional encoder representations from transformers (BERT). We will share more experiment results and ablation testing results for further research. 
 
 
 ## Citation
